@@ -1,0 +1,16 @@
+#N canvas 659 76 659 449 10;
+#X obj 37 88 inlet~;
+#X obj 37 213 poke~ \$0-p1;
+#X obj 67 182 count~ 0 44100;
+#X obj 39 270 *~ 44100;
+#X obj 187 88 table \$0-p1 44100;
+#X obj 37 332 outlet~;
+#X obj 38 301 tabread4~ \$0-p1;
+#X obj 38 243 phasor~ \$1;
+#X obj 67 153 loadbang;
+#X connect 0 0 1 0;
+#X connect 2 0 1 1;
+#X connect 3 0 6 0;
+#X connect 6 0 5 0;
+#X connect 7 0 3 0;
+#X connect 8 0 2 0;

@@ -1,0 +1,16 @@
+#N canvas 723 482 450 299 10;
+#X obj 45 76 inlet;
+#X text 85 77 Frequency;
+#X obj 45 142 osc~;
+#X obj 45 111 * \$1;
+#X obj 46 225 outlet~;
+#X obj 147 77 inlet;
+#X text 183 78 Amplitude;
+#X obj 147 112 * \$2;
+#X obj 46 191 *~;
+#X connect 0 0 3 0;
+#X connect 2 0 8 0;
+#X connect 3 0 2 0;
+#X connect 5 0 7 0;
+#X connect 7 0 8 1;
+#X connect 8 0 4 0;
